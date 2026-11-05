@@ -1,6 +1,6 @@
 # Bridgeway Wholesale Ltd website
 
-Six-page responsive company profile site with a Node.js server and no production dependencies. Node.js 24 or later is required.
+Seven-page responsive company profile site with a Node.js server and no production dependencies. Node.js 24 or later is required.
 
 ## Develop
 
@@ -11,7 +11,7 @@ npm start
 
 The server binds to port 3000 (override with `PORT`). `npm run dev` restarts the server on changes. The current cloud UI does not provide an external preview URL; use an authorised port preview if your workspace offers one. Do not publish the environment or deploy the site without the user's instruction.
 
-Pages: `/`, `/about`, `/our-business`, `/contact`, `/privacy`, `/terms`. Routes can be opened and refreshed directly. Shared header/footer and navigation are rendered by `public/app.js`; styling is in `public/styles.css`.
+Pages: `/`, `/about`, `/our-business`, `/products`, `/contact`, `/privacy`, `/terms`. Routes can be opened and refreshed directly. Shared header/footer and navigation are rendered by `public/app.js`; styling is in `public/styles.css`.
 
 ## Photography — required before launch
 
@@ -46,7 +46,7 @@ Browser tests use system Chromium at `/usr/bin/chromium`. Change `playwright.con
 
 The supplied logo is visible as a chat image but is not available as a downloadable file in the workspace. `public/logo.svg` is an interim vector interpretation of its interwoven BW monogram, with a reversed ivory treatment for navy backgrounds; `logo-light.svg` provides a navy version. Replace with the exact supplied artwork when its file is available. Do not claim this reconstruction is the original logo asset.
 
-Before launch, confirm hosting/data-processing details, retention period and privacy contact in the Privacy Policy. Confirm image selections and replace the interim logo with the original. This website contains no store, pricing, checkout, product catalogue, analytics or tracking cookies.
+Before launch, confirm hosting/data-processing details, retention period and privacy contact in the Privacy Policy. Confirm image selections and replace the interim logo with the original. This website contains an enquiry-only product showcase and no store, pricing, checkout, analytics or tracking cookies.
 
 ## Vercel deployment
 
@@ -57,3 +57,9 @@ In Vercel, connect this GitHub repository (`ammarahmed1902/BRIDGEWAY-WHOLESALE-L
 Set `RESEND_API_KEY`, `ENQUIRY_FROM` and `ENQUIRY_TO` securely in Vercel when the business email is ready, and redeploy after changing environment variables. No credentials are included in the repository. The same launch limitations listed above still apply. Serverless instances do not share memory, so in-memory rate limits and short-lived duplicate caches are per-instance; provider-side idempotency supplements duplicate prevention, but shared anti-spam storage is needed for stronger production enforcement.
 
 The serverless entry point is locally tested by `npm run test:server`. Set `PLAYWRIGHT_BASE_URL` to run browser checks against another test server. Local tests do not confirm that Vercel has built or published a deployment; that requires project access and observed deployment results.
+
+## Product showcase
+
+The owner approved an enquiry-only showcase for seven named items. `public/products.js` holds the names, categories, descriptions and artwork filenames. `/products` displays all seven with category filters; Home features three items and a link to the full showcase. Each enquiry button goes to `/contact?product=<known-id>#enquiry` and prefills the requirements field with that product name. Only allowlisted product IDs are accepted.
+
+The local SVG illustrations in `public/products/` were authored for this site and are deliberately labelled indicative. They are not photographs of confirmed items or evidence of specifications, availability, Apple authorisation or 3M authorisation. Replace them with owner-supplied product photographs and confirmed model information when available, keeping aspect ratios consistent and updating alt text. No performance or safety-certification claims have been added. Product names are normalised from the owner's list (for example, “4-in-1 yellow cable”).

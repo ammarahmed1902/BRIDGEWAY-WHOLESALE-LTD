@@ -33,7 +33,7 @@ export async function handler(req,res){
   }catch{return json(res,502,{error:'We could not send your enquiry. Your information is still here. Please try again later.'});}finally{pending.delete(fingerprint);}
  }
  if(req.method!=='GET'&&req.method!=='HEAD'){res.writeHead(405);return res.end();}
- const pages=['/','/about','/our-business','/contact','/privacy','/terms'];let path=pages.includes(url.pathname)?'/index.html':url.pathname;
+ const pages=['/','/about','/our-business','/products','/contact','/privacy','/terms'];let path=pages.includes(url.pathname)?'/index.html':url.pathname;
  try{const file=resolve(root,'.'+decodeURIComponent(path));if(!file.startsWith(root+'/'))throw Error();const body=await readFile(file);const types={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.svg':'image/svg+xml','.jpg':'image/jpeg','.webp':'image/webp'};res.writeHead(200,{'Content-Type':types[extname(file)]||'application/octet-stream','Cache-Control':path==='/index.html'?'no-cache':'public, max-age=3600'});res.end(req.method==='HEAD'?undefined:body);}catch{if(/^\/images\/(warehouse|warehouse-contact|electronics|household|general)\.jpg$/.test(path)){const name=path.slice('/images/'.length,-4);res.writeHead(307,{'Location':stockImageUrl(name),'Cache-Control':'public, max-age=300'});return res.end();}res.writeHead(404,{'Content-Type':'text/plain'});res.end('Page not found');}
 }
 export const server=http.createServer(handler);

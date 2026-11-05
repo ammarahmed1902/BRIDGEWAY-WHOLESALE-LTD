@@ -14,10 +14,10 @@ before(async()=>{
 });
 after(async()=>{await new Promise(resolve=>server.close(resolve));});
 test('Vercel handler serves every direct page route and bundled assets',async()=>{
- for(const path of ['/','/about','/our-business','/contact','/privacy','/terms']){
+ for(const path of ['/','/about','/our-business','/products','/contact','/privacy','/terms']){
   const res=await fetch(base+path);assert.equal(res.status,200);assert.match(await res.text(),/id="app"/);
  }
- for(const path of ['/styles.css','/app.js','/logo.svg','/favicon.svg']){const res=await fetch(base+path);assert.equal(res.status,200);assert.ok((await res.text()).length>50);}
+ for(const path of ['/styles.css','/app.js','/products.js','/products/watch.svg','/logo.svg','/favicon.svg']){const res=await fetch(base+path);assert.equal(res.status,200);assert.ok((await res.text()).length>50);}
  assert.equal((await fetch(base+'/not-a-page')).status,404);
 });
 test('Vercel pre-parsed request bodies retain field validation and size limits',async()=>{

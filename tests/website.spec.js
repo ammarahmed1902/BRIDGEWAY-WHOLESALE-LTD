@@ -1,10 +1,10 @@
 import {test,expect} from '@playwright/test';
-const pages=['/','/about','/our-business','/contact','/privacy','/terms'];
+const pages=['/','/about','/our-business','/products','/contact','/privacy','/terms'];
 const widths=[320,375,390,550,640,768,900,1024,1280,1440,1920];
 test('every page opens directly, refreshes, has valid links and adapts across widths',async({page})=>{
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  for(const path of pages){await page.goto(path);await page.reload();await expect(page.locator('h1')).toHaveCount(1);await expect(page.locator('header')).toBeVisible();await expect(page.locator('footer')).toBeVisible();
-  const links=await page.locator('a').evaluateAll(nodes=>nodes.map(a=>a.getAttribute('href')));for(const href of links){expect(href).toBeTruthy();expect(href).not.toBe('#');if(href.startsWith('/')){const [route,hash]=href.split('#');expect(pages).toContain(route);if(hash){const response=await page.request.get(route);expect(response.ok()).toBeTruthy();}}}
+  const links=await page.locator('a').evaluateAll(nodes=>nodes.map(a=>a.getAttribute('href')));for(const href of links){expect(href).toBeTruthy();expect(href).not.toBe('#');if(href.startsWith('/')){const target=new URL(href,'http://localhost');const route=target.pathname,hash=target.hash.slice(1);expect(pages).toContain(route);if(hash){const response=await page.request.get(route);expect(response.ok()).toBeTruthy();}}}
   for(const width of widths){await page.setViewportSize({width,height:width<550?844:1000});const dimensions=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,inner:innerWidth}));expect(dimensions.scroll,`${path} overflow at ${width}`).toBeLessThanOrEqual(dimensions.inner);}
  }
  expect(errors).toEqual([]);
@@ -22,4 +22,16 @@ test('photography fallback remains labelled when the external source is unavaila
  await expect(page.locator('.hero-photo img')).toHaveAttribute('data-photo-status','unavailable');
  await expect(page.locator('.feature-card .gold-rule')).toBeEmpty();
  await expect(page.locator('.hero-photo img')).toHaveAttribute('src','/image-pending.svg');
+});
+test('product showcase filters, artwork and product-specific enquiries work',async({page})=>{
+ await page.goto('/products');await page.reload();await expect(page.locator('.product-card')).toHaveCount(7);
+ await expect(page.getByRole('navigation').getByRole('link',{name:'Products',exact:true})).toHaveAttribute('aria-current','page');
+ await page.getByRole('button',{name:'Car accessories',exact:true}).click();await expect(page.locator('.product-card:visible')).toHaveCount(3);await expect(page.locator('.product-count')).toHaveText('3 items to explore');
+ await page.getByRole('button',{name:'Computer accessories',exact:true}).click();await expect(page.locator('.product-card:visible')).toHaveCount(1);
+ await page.getByRole('button',{name:'All items',exact:true}).click();await expect(page.locator('.product-card:visible')).toHaveCount(7);
+ const products=await page.locator('.product-card').evaluateAll(cards=>cards.map(card=>({name:card.querySelector('h3').textContent,href:card.querySelector('a').getAttribute('href')})));
+ for(const product of products){await page.goto('/products');await page.getByRole('link',{name:`Enquire about ${product.name}`,exact:true}).click();await expect(page).toHaveURL(new RegExp('/contact\\?product='));await expect(page.locator('#requirements')).toHaveValue(new RegExp(product.name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));}
+ await page.goto('/products');await page.locator('footer').scrollIntoViewIfNeeded();expect(await page.locator('.product-visual img').evaluateAll(images=>images.every(image=>image.complete&&image.naturalWidth>0))).toBeTruthy();
+ for(const width of[320,390,768,900,1440]){await page.setViewportSize({width,height:950});await page.evaluate(()=>document.documentElement.style.fontSize='200%');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();await page.evaluate(()=>document.documentElement.style.fontSize='');}
+ for(const [name,width,height]of[['desktop',1440,1000],['tablet',768,1024],['mobile',390,844]]){await page.setViewportSize({width,height});await page.goto('/products');await page.screenshot({path:`artifacts/products-${name}.png`,fullPage:true});}
 });

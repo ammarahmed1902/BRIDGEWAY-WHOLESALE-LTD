@@ -17,3 +17,7 @@ The download script requests JPEG output, 1600 px for the hero and 1000 px for o
 ## Delivery
 
 `public/image-sources.js` is the shared source of image IDs and optimisation parameters. The server first serves a downloaded local JPEG, if present. Otherwise it returns a temporary redirect to the exact Unsplash URL for that photograph. Browsers request Unsplash directly in that case; no image proxy or access-policy bypass is used. If the source cannot load, the browser shows an explicitly labelled unavailable-photography fallback. This fallback is not a successful photograph load. Run `npm run images:download` after runtime permission is applied to make delivery local without changing page markup.
+
+## Product showcase artwork
+
+The seven SVGs under `public/products/` (watch, car-charger, cable, earplugs, mouse, fm-p4, fm-q6) are original vector illustrations authored for this website, not third-party stock photographs or actual product photography. No brand logos, packaging artwork or product-specific certification marks are included. Cards and alternative text identify them as illustrations; exact models require owner confirmation. Their purpose is consistent interim presentation until actual product photos are supplied.

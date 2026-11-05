@@ -10,3 +10,31 @@
 .section-heading>div{max-width:100%}.section-heading h2{overflow-wrap:anywhere}
 .contact-picture{width:28%;left:-14%;height:110%}
 @media(max-width:1100px){.contact-picture{width:28%;left:-14%}}
+
+/* A slow wash of brand colours behind the hero copy and curved photograph. */
+.hero {
+  isolation: isolate;
+  background: var(--ivory);
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: -24%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 22% 28%, #a9d8ca88 0%, transparent 43%),
+    radial-gradient(ellipse at 53% 72%, #ead3a68c 0%, transparent 44%),
+    radial-gradient(ellipse at 8% 80%, #d8c7d66b 0%, transparent 37%),
+    radial-gradient(ellipse at 66% 18%, #c5dee573 0%, transparent 42%);
+  transform-origin: 35% 50%;
+  animation: hero-colour-drift 22s ease-in-out infinite alternate;
+}
+@keyframes hero-colour-drift {
+  0% { transform: translate3d(-3%, -2%, 0) scale(1); }
+  50% { transform: translate3d(4%, 3%, 0) scale(1.06); }
+  100% { transform: translate3d(-1%, 5%, 0) scale(1.12); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero::before { animation: none; transform: none; }
+}

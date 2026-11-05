@@ -11,30 +11,46 @@
 .contact-picture{width:28%;left:-14%;height:110%}
 @media(max-width:1100px){.contact-picture{width:28%;left:-14%}}
 
-/* A slow wash of brand colours behind the hero copy and curved photograph. */
+/* Moving seafoam, aqua and champagne light behind the hero content. */
 .hero {
   isolation: isolate;
   background: var(--ivory);
 }
-.hero::before {
+.hero::before,
+.hero::after {
   content: '';
   position: absolute;
-  inset: -24%;
-  z-index: -1;
+  inset: -30%;
   pointer-events: none;
+}
+.hero::before {
+  z-index: -2;
   background:
-    radial-gradient(ellipse at 22% 28%, #a9d8ca88 0%, transparent 43%),
-    radial-gradient(ellipse at 53% 72%, #ead3a68c 0%, transparent 44%),
-    radial-gradient(ellipse at 8% 80%, #d8c7d66b 0%, transparent 37%),
-    radial-gradient(ellipse at 66% 18%, #c5dee573 0%, transparent 42%);
+    radial-gradient(ellipse at 18% 25%, #71c7b29c 0%, transparent 39%),
+    radial-gradient(ellipse at 49% 76%, #e4b96e80 0%, transparent 38%),
+    radial-gradient(ellipse at 57% 17%, #80bed58c 0%, transparent 40%),
+    radial-gradient(ellipse at 8% 84%, #bccda273 0%, transparent 35%);
   transform-origin: 35% 50%;
-  animation: hero-colour-drift 22s ease-in-out infinite alternate;
+  animation: hero-colour-drift 12s ease-in-out infinite alternate;
+}
+.hero::after {
+  z-index: -1;
+  background: radial-gradient(ellipse at 28% 56%, #f4d59b73, transparent 32%);
+  animation: hero-gold-drift 16s ease-in-out infinite alternate;
 }
 @keyframes hero-colour-drift {
-  0% { transform: translate3d(-3%, -2%, 0) scale(1); }
-  50% { transform: translate3d(4%, 3%, 0) scale(1.06); }
-  100% { transform: translate3d(-1%, 5%, 0) scale(1.12); }
+  0% { transform: translate3d(-9%, -5%, 0) rotate(-4deg) scale(1.02); }
+  50% { transform: translate3d(3%, 6%, 0) rotate(1deg) scale(1.09); }
+  100% { transform: translate3d(10%, -3%, 0) rotate(4deg) scale(1.16); }
+}
+@keyframes hero-gold-drift {
+  0% { transform: translate3d(8%, 6%, 0) scale(1.12); }
+  100% { transform: translate3d(-10%, -8%, 0) scale(.95); }
+}
+@media (max-width: 550px) {
+  .hero::before { animation-duration: 16s; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero::before { animation: none; transform: none; }
+  .hero::before,
+  .hero::after { animation: none; transform: none; }
 }

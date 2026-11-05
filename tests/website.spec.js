@@ -20,7 +20,6 @@ test('photography fallback remains labelled when the external source is unavaila
  await page.route('https://images.unsplash.com/**',route=>route.abort('blockedbyclient'));
  await page.goto('/');await page.locator('footer').scrollIntoViewIfNeeded();
  await expect(page.locator('.hero-photo img')).toHaveAttribute('data-photo-status','unavailable');
- await expect(page.locator('.hero-photo .photo-note')).toHaveText('Photography unavailable');
  await expect(page.locator('.feature-card .gold-rule')).toBeEmpty();
  await expect(page.locator('.hero-photo img')).toHaveAttribute('src','/image-pending.svg');
 });

@@ -1,0 +1,32 @@
+{
+  "name": "bridgeway-wholesale-ltd",
+  "version": "1.0.0",
+  "description": "Company profile website for Bridgeway Wholesale Ltd",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node --use-env-proxy --env-file-if-exists=.env server.js",
+    "dev": "node --watch --use-env-proxy --env-file-if-exists=.env server.js",
+    "test": "playwright test",
+    "test:server": "node --test tests/server.test.mjs",
+    "images:download": "node scripts/download-images.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ammarahmed1902/BRIDGEWAY-WHOLESALE-LTD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ammarahmed1902/BRIDGEWAY-WHOLESALE-LTD/issues"
+  },
+  "homepage": "https://github.com/ammarahmed1902/BRIDGEWAY-WHOLESALE-LTD#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1"
+  },
+  "private": true
+}

@@ -47,3 +47,13 @@ Browser tests use system Chromium at `/usr/bin/chromium`. Change `playwright.con
 The supplied logo is visible as a chat image but is not available as a downloadable file in the workspace. `public/logo.svg` is an interim vector interpretation of its interwoven BW monogram, with a reversed ivory treatment for navy backgrounds; `logo-light.svg` provides a navy version. Replace with the exact supplied artwork when its file is available. Do not claim this reconstruction is the original logo asset.
 
 Before launch, confirm hosting/data-processing details, retention period and privacy contact in the Privacy Policy. Confirm image selections and replace the interim logo with the original. This website contains no store, pricing, checkout, product catalogue, analytics or tracking cookies.
+
+## Vercel deployment
+
+`vercel.json` explicitly builds `api/index.js` with the Vercel Node runtime, includes `public/**` in the function bundle and routes page, asset and enquiry requests through the shared handler. Node 24.x is pinned in `package.json`. Importing the handler does not start a standalone server. `npm start` continues to work for local development.
+
+In Vercel, connect this GitHub repository (`ammarahmed1902/BRIDGEWAY-WHOLESALE-LTD`), select `main` as the Production Branch, and use the repository root as Root Directory. The checked-in Vercel configuration defines the builder and routes. A main-branch push only triggers a deployment when the Git integration is connected and authorised. If the existing Vercel project is not connected, connect it in Settings → Git and create a deployment from `main` (or import the repository as a project). If a deployment is created but fails, inspect its build/function logs before changing DNS: a correctly configured domain does not create a deployment.
+
+Set `RESEND_API_KEY`, `ENQUIRY_FROM` and `ENQUIRY_TO` securely in Vercel when the business email is ready, and redeploy after changing environment variables. No credentials are included in the repository. The same launch limitations listed above still apply. Serverless instances do not share memory, so in-memory rate limits and short-lived duplicate caches are per-instance; provider-side idempotency supplements duplicate prevention, but shared anti-spam storage is needed for stronger production enforcement.
+
+The serverless entry point is locally tested by `npm run test:server`. Set `PLAYWRIGHT_BASE_URL` to run browser checks against another test server. Local tests do not confirm that Vercel has built or published a deployment; that requires project access and observed deployment results.

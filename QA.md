@@ -28,3 +28,7 @@ System Chromium, headless real-browser automation. All six pages opened directly
 ## Evidence
 
 `artifacts/desktop.png`, `artifacts/tablet.png`, `artifacts/mobile.png`, `artifacts/test-results.json`, and `artifacts/resource-audit.json`.
+
+## Vercel compatibility follow-up
+
+Added a dedicated `api/index.js` serverless entry point and explicit `vercel.json` builder/routing configuration. Import no longer starts a listening server. Bundled `public/**` assets and Node 24.x are declared. Two additional integration tests verify direct page/asset responses, no import-time listening side effect, and Vercel-preparsed request validation/body limits. The six Chromium checks were rerun against the imported serverless handler on a separate local port. This is local compatibility evidence, not a Vercel build or production deployment result. No Vercel token, project binding or deployment/log connector was available. Production status remains unverified. The existing image, branding and live-email limitations remain unchanged.

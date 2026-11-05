@@ -32,3 +32,9 @@ System Chromium, headless real-browser automation. All six pages opened directly
 ## Vercel compatibility follow-up
 
 Added a dedicated `api/index.js` serverless entry point and explicit `vercel.json` builder/routing configuration. Import no longer starts a listening server. Bundled `public/**` assets and Node 24.x are declared. Two additional integration tests verify direct page/asset responses, no import-time listening side effect, and Vercel-preparsed request validation/body limits. The six Chromium checks were rerun against the imported serverless handler on a separate local port. This is local compatibility evidence, not a Vercel build or production deployment result. No Vercel token, project binding or deployment/log connector was available. Production status remains unverified. The existing image, branding and live-email limitations remain unchanged.
+
+## Photography integration follow-up
+
+The five missing image routes now redirect to their specific, optimised Unsplash photograph when a local JPEG is absent. Downloaded local JPEGs still take precedence automatically. The shared source module is used by both the server and the downloader. There is no generated warehouse imagery. The privacy policy now explicitly describes direct external image requests. Browser error handling retains an obvious unavailable-photography label if the external source fails.
+
+The runtime still denies Unsplash requests (HTTP 403), although the editable draft contains the domains. Real photographs therefore remain **visually unverified in this environment**. Correct redirect destinations and local-file precedence were checked by server tests; those checks do not establish that actual photo pixels loaded. Responsive and enquiry regression checks were run in Chromium, including deliberate source failure. Applying network access and inspecting actual photo content/crops remains required before photography sign-off.

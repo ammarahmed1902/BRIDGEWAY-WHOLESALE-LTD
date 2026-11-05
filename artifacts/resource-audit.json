@@ -1,48 +1,48 @@
 {
   "browser": "155.0.8059.79",
+  "photoDelivery": "Local JPEG when present; otherwise a redirect to the selected Unsplash photograph",
   "pages": [
     {
       "route": "/",
       "title": "UK General Wholesale | Bridgeway Wholesale Ltd",
+      "unavailablePhotography": 5,
       "brokenImages": [],
       "failedRequests": []
     },
     {
       "route": "/about",
       "title": "About Us | Bridgeway Wholesale Ltd",
+      "unavailablePhotography": 1,
       "brokenImages": [],
       "failedRequests": []
     },
     {
       "route": "/our-business",
       "title": "Our Business | Bridgeway Wholesale Ltd",
+      "unavailablePhotography": 3,
       "brokenImages": [],
       "failedRequests": []
     },
     {
       "route": "/contact",
       "title": "Contact | Bridgeway Wholesale Ltd",
+      "unavailablePhotography": 1,
       "brokenImages": [],
       "failedRequests": []
     },
     {
       "route": "/privacy",
       "title": "Privacy Policy | Bridgeway Wholesale Ltd",
+      "unavailablePhotography": 0,
       "brokenImages": [],
       "failedRequests": []
     },
     {
       "route": "/terms",
       "title": "Terms of Use | Bridgeway Wholesale Ltd",
+      "unavailablePhotography": 0,
       "brokenImages": [],
       "failedRequests": []
     }
-  ],
-  "missingPhotography": [
-    "http://127.0.0.1:3000/images/warehouse.jpg",
-    "http://127.0.0.1:3000/images/electronics.jpg",
-    "http://127.0.0.1:3000/images/household.jpg",
-    "http://127.0.0.1:3000/images/general.jpg",
-    "http://127.0.0.1:3000/images/warehouse-contact.jpg"
   ]
 }

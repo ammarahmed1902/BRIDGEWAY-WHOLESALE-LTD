@@ -15,7 +15,7 @@ Pages: `/`, `/about`, `/our-business`, `/contact`, `/privacy`, `/terms`. Routes 
 
 ## Photography — required before launch
 
-Run `npm run images:download` after `images.unsplash.com` is allowed in the **running** environment. This downloads optimised, genuine stock photographs to `public/images`. See [IMAGE-SOURCES.md](IMAGE-SOURCES.md). Do not replace photographs with AI-generated warehouse images. Downloads are currently blocked by network policy; the layout exists but image QA cannot pass until the actual files are downloaded and inspected. The draft domain addition does not itself apply runtime settings.
+Run `npm run images:download` after `images.unsplash.com` is allowed in the **running** environment. This downloads optimised, genuine stock photographs to `public/images`. See [IMAGE-SOURCES.md](IMAGE-SOURCES.md). Do not replace photographs with AI-generated warehouse images. Downloads are currently blocked by network policy. Missing local files now redirect to the selected genuine Unsplash photographs, so deployed visitors can load them directly from Unsplash. Blocked or unavailable photos get a clearly labelled fallback. Actual image/crop QA remains pending until the sources can be loaded and inspected. The draft domain addition does not itself apply runtime settings.
 
 ## Enquiry email — intentionally pending
 

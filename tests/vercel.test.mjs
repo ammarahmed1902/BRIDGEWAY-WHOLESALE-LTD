@@ -26,3 +26,10 @@ test('Vercel pre-parsed request bodies retain field validation and size limits',
  assert.equal(response.status,422);assert.deepEqual(Object.keys((await response.json()).errors),['email']);
  const oversized=await fetch(base+'/api/enquiry',{method:'POST',headers:{'Content-Type':'application/json','x-test-parsed-body':'1'},body:JSON.stringify({...data,requirements:'x'.repeat(17000)})});assert.equal(oversized.status,413);
 });
+test('missing local photographs redirect to the selected genuine stock source',async()=>{
+ for(const name of ['warehouse','warehouse-contact','electronics','household','general']){
+  const response=await fetch(`${base}/images/${name}.jpg`,{redirect:'manual'});
+  if(response.status===307){const destination=new URL(response.headers.get('location'));assert.equal(destination.origin,'https://images.unsplash.com');assert.match(destination.pathname,/^\/photo-/);assert.equal(destination.searchParams.get('fm'),'jpg');}
+  else {assert.equal(response.status,200);assert.equal(response.headers.get('content-type'),'image/jpeg');}
+ }
+});

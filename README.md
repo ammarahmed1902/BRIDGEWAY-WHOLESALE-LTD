@@ -19,7 +19,7 @@ Run `npm run images:download` after `images.unsplash.com` is allowed in the **ru
 
 ## Enquiry email — intentionally pending
 
-The owner has confirmed that the domain and receiving email are not yet ready. Copy `.env.example` to `.env` locally and set these through secure environment settings in production:
+The owner has supplied the business email `info@bridgewaywholesale.co.uk` and telephone `+44 7367 064379`. The receiving address is included in `.env.example`; email-service credentials and sender-domain verification are still required for form delivery. Copy `.env.example` to `.env` locally and set these through secure environment settings in production:
 
 - `RESEND_API_KEY`: valid Resend API key.
 - `ENQUIRY_FROM`: sender address on a verified Resend domain.

@@ -66,3 +66,9 @@ The server now adds a content hash to each app.js/products.js/styles.css URL in 
 ## Apple Watch charger image update — 6 November 2026
 
 Replaced the charger's vector illustration with a studio-style edited version of the owner-supplied image. The photo card has meaningful edited-image alternative text and no incorrect “Illustration” badge. Chromium confirmed the 1000 px WebP loads on both Home and Products, no horizontal overflow at 320/390/768/1440 px, appropriate desktop/mobile framing and the correct prefilled enquiry destination. The existing product filters/artwork/enquiry browser test passed again. Evidence: `artifacts/apple-watch-charger-desktop.png` and `artifacts/apple-watch-charger-mobile.png`; full Products screenshots were refreshed. Production deployment has not been independently verified.
+
+## Partial studio-imagery update — 6 November 2026
+
+Installed three explicitly labelled, generic studio illustrations for the mini car charger, yellow multi-ended cable and RGB mouse. These are not verified manufacturer photographs. P4, Q6 and 3M artwork remains unchanged pending exact model/source information. Online research attempts were denied by the environment proxy (HTTP 403); research and all six model-specific photo updates are not complete.
+
+Chromium verified each new 1000 px image loads, its illustrative label is visible, Home uses the new cable/mouse visuals, and no horizontal overflow occurs at 320/375/390/768/1024/1440/1920 px. The existing product filters/artwork/all-seven-enquiry-links browser check passed. Desktop/tablet/mobile Products screenshots were refreshed and desktop was visually inspected. The three WebP files total approximately 70 KB. No live Vercel deployment was inspected. Source/provenance and unresolved inputs are documented in PRODUCT-IMAGE-RESEARCH.md and IMAGE-SOURCES.md.

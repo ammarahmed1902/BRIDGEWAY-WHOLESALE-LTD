@@ -27,3 +27,15 @@ The seven SVGs under `public/products/` (watch, car-charger, cable, earplugs, mo
 `public/products/apple-watch-charger-studio.webp` replaces the watch illustration in rendered product cards. Source: the owner's attached charger image in this chat. The image-editing tool produced an AI-assisted studio-style edit preserving the recognisable white charging puck, USB-A plug and cable, removing promotional badges/text and arranging a coiled cable on warm ivory with soft shadows. This is edited product imagery, not an untouched source photograph. No series compatibility, cable-length, certification or official-brand claims were copied into the website.
 
 The generated full-size PNG remains at `/workspace/generated_images/exec-694459bd-586b-4f14-9dda-77519dbabd71.png`. The web derivative is 1000 × 714 WebP, approximately 15 KB, converted with ImageMagick for delivery. Other products retain their labelled vector illustrations. The unused `watch.svg` is retained as a legacy asset.
+
+## Generic studio illustrations — 6 November 2026
+
+The following are AI-generated illustrative visuals, not downloaded online product photographs. The edited watch charger was used only as a style reference. Research was blocked; no exact product/connector configuration is confirmed. All three cards retain the visible “Illustrative image” label and descriptive alt text. Full source PNGs remain outside the checkout, with optimised 1000 px WebP derivatives committed for delivery.
+
+| Website asset | Generated source PNG | Approximate size |
+|---|---|---|
+| `public/products/mini-car-charger-studio-illustration.webp` | `/workspace/generated_images/exec-2c43089e-67ae-411b-8918-3622cb39b747.png` | 22 KB |
+| `public/products/yellow-cable-studio-illustration.webp` | `/workspace/generated_images/exec-e5d6822d-d946-4871-beff-848101a2efd4.png` | 25 KB |
+| `public/products/rgb-mouse-studio-illustration.webp` | `/workspace/generated_images/exec-359f8270-b3ff-4399-86a0-92bcab637aca.png` | 23 KB |
+
+3M earplugs, P4 and Q6 retain their existing vector illustrations pending model/reference confirmation. See PRODUCT-IMAGE-RESEARCH.md for the blocked research and remaining inputs.

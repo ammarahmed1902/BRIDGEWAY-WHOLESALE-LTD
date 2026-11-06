@@ -14,14 +14,20 @@ const productData = [
     "name": "Mini car charger",
     "category": "Car accessories",
     "description": "Tell us the connector types and vehicle charging requirements you need.",
-    "illustration": "car-charger"
+    "illustration": "car-charger",
+    "image": "mini-car-charger-studio-illustration.webp",
+    "imageAlt": "Studio-style illustration of a generic compact car USB charger; actual model and ports may differ",
+    "imageLabel": "Illustrative image"
   },
   {
     "id": "4-in-1-yellow-cable",
     "name": "4-in-1 yellow cable",
     "category": "Charging & cables",
     "description": "Enquire about the yellow cable and confirm the connector combination you require.",
-    "illustration": "cable"
+    "illustration": "cable",
+    "image": "yellow-cable-studio-illustration.webp",
+    "imageAlt": "Studio-style illustration of a yellow multi-ended charging cable; actual connector combination must be confirmed",
+    "imageLabel": "Illustrative image"
   },
   {
     "id": "3m-earplugs",
@@ -35,7 +41,10 @@ const productData = [
     "name": "RGB mouse",
     "category": "Computer accessories",
     "description": "Discuss your mouse requirements, including connection type and intended use.",
-    "illustration": "mouse"
+    "illustration": "mouse",
+    "image": "rgb-mouse-studio-illustration.webp",
+    "imageAlt": "Studio-style illustration of a generic black wired mouse with RGB edge lighting; actual model may differ",
+    "imageLabel": "Illustrative image"
   },
   {
     "id": "p4-car-fm",

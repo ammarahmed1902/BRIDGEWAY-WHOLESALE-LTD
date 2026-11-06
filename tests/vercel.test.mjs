@@ -33,3 +33,11 @@ test('missing local photographs redirect to the selected genuine stock source',a
   else {assert.equal(response.status,200);assert.equal(response.headers.get('content-type'),'image/jpeg');}
  }
 });
+test('page assets use versioned URLs and mutable code revalidates instead of staying stale',async()=>{
+ const response=await fetch(base+'/contact');assert.equal(response.headers.get('cache-control'),'no-cache');
+ const html=await response.text();for(const asset of ['styles.css','products.js','app.js']){
+  const match=html.match(new RegExp('/'+asset.replace('.','\\.')+'\\?v=([a-f0-9]{12})'));assert.ok(match,`${asset} must have a content version`);
+  const code=await fetch(base+match[0]);assert.equal(code.status,200);assert.equal(code.headers.get('cache-control'),'no-cache');
+ }
+ const script=await fetch(base+'/app.js');assert.equal(script.headers.get('cache-control'),'no-cache');assert.match(await script.text(),/info@bridgewaywholesale\.co\.uk/);
+});

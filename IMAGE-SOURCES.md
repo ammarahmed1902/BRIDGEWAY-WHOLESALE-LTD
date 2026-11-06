@@ -21,3 +21,9 @@ The download script requests JPEG output, 1600 px for the hero and 1000 px for o
 ## Product showcase artwork
 
 The seven SVGs under `public/products/` (watch, car-charger, cable, earplugs, mouse, fm-p4, fm-q6) are original vector illustrations authored for this website, not third-party stock photographs or actual product photography. No brand logos, packaging artwork or product-specific certification marks are included. Cards and alternative text identify them as illustrations; exact models require owner confirmation. Their purpose is consistent interim presentation until actual product photos are supplied.
+
+## Apple Watch charger studio image — 6 November 2026
+
+`public/products/apple-watch-charger-studio.webp` replaces the watch illustration in rendered product cards. Source: the owner's attached charger image in this chat. The image-editing tool produced an AI-assisted studio-style edit preserving the recognisable white charging puck, USB-A plug and cable, removing promotional badges/text and arranging a coiled cable on warm ivory with soft shadows. This is edited product imagery, not an untouched source photograph. No series compatibility, cable-length, certification or official-brand claims were copied into the website.
+
+The generated full-size PNG remains at `/workspace/generated_images/exec-694459bd-586b-4f14-9dda-77519dbabd71.png`. The web derivative is 1000 × 714 WebP, approximately 15 KB, converted with ImageMagick for delivery. Other products retain their labelled vector illustrations. The unused `watch.svg` is retained as a legacy asset.

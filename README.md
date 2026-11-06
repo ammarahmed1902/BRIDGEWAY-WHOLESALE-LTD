@@ -67,3 +67,5 @@ The local SVG illustrations in `public/products/` were authored for this site an
 ## Updates and browser caching
 
 Served HTML versions the app scripts and stylesheet using their content hashes. HTML, JavaScript and CSS use `Cache-Control: no-cache` so later deployments do not leave visitors running hour-old code under unchanged URLs. Images are cached separately. If production still shows older content, first confirm that Vercel's active production deployment points to the intended `main` commit; pushing source is not proof of a successful deployment. Reload an existing browser tab after that deployment becomes Ready.
+
+The Apple Watch charger now uses `public/products/apple-watch-charger-studio.webp`, a professionally restyled, AI-assisted edit of the owner's supplied source image. Its card omits the illustration badge; the remaining six products still use labelled vector illustrations. Optional `image` and `imageAlt` fields in `public/products.js` override the SVG fallback, allowing subsequent supplied product images to be added consistently. Image provenance is recorded in IMAGE-SOURCES.md.

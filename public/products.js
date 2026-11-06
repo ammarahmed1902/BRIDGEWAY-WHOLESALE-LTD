@@ -5,7 +5,9 @@ const productData = [
     "name": "Apple Watch charger",
     "category": "Charging & cables",
     "description": "Ask us to confirm the charger type and compatibility with your watch model.",
-    "illustration": "watch"
+    "illustration": "watch",
+    "image": "apple-watch-charger-studio.webp",
+    "imageAlt": "Studio-style edited image of a white magnetic watch charger with a USB-A connector and coiled cable"
   },
   {
     "id": "mini-car-charger",

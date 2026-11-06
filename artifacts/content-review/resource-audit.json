@@ -1,0 +1,151 @@
+{
+  "scope": "Local current checkout; production access denied by environment proxy",
+  "browser": "155.0.8059.79",
+  "pages": [
+    {
+      "route": "/",
+      "title": "UK Wholesale & Order Fulfilment | Bridgeway Wholesale Ltd",
+      "canonical": "https://www.bridgewaywholesale.co.uk/",
+      "h1": "Connecting businesses. Opening possibilities.",
+      "unavailableStockImages": 2,
+      "brokenImages": [],
+      "pageErrors": [],
+      "networkFailures": [
+        {
+          "url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=82&fm=jpg",
+          "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1000&q=82&fm=jpg",
+          "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=82&fm=jpg",
+          "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1000&q=82&fm=jpg",
+          "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=82&fm=jpg",
+          "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+        }
+      ],
+      "httpFailures": []
+    },
+    {
+      "route": "/about",
+      "title": "About Us | Bridgeway Wholesale Ltd",
+      "canonical": "https://www.bridgewaywholesale.co.uk/about",
+      "h1": "Wholesale supply. Seller fulfilment.",
+      "unavailableStockImages": 1,
+      "brokenImages": [],
+      "pageErrors": [],
+      "networkFailures": [
+        {
+          "url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=82&fm=jpg",
+          "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=82&fm=jpg",
+          "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=82&fm=jpg",
+          "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+        }
+      ],
+      "httpFailures": []
+    },
+    {
+      "route": "/our-business",
+      "title": "Our Business | Bridgeway Wholesale Ltd",
+      "canonical": "https://www.bridgewaywholesale.co.uk/our-business",
+      "h1": "Different categories. One point of contact.",
+      "unavailableStockImages": 3,
+      "brokenImages": [],
+      "pageErrors": [],
+      "networkFailures": [
+        {
+          "url": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1000&q=82&fm=jpg",
+          "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1000&q=82&fm=jpg",
+          "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=82&fm=jpg",
+          "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1000&q=82&fm=jpg",
+          "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1000&q=82&fm=jpg",
+          "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1000&q=82&fm=jpg",
+          "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+        }
+      ],
+      "httpFailures": []
+    },
+    {
+      "route": "/products",
+      "title": "Products | Bridgeway Wholesale Ltd",
+      "canonical": "https://www.bridgewaywholesale.co.uk/products",
+      "h1": "Everyday essentials. Business possibilities.",
+      "unavailableStockImages": 0,
+      "brokenImages": [],
+      "pageErrors": [],
+      "networkFailures": [],
+      "httpFailures": []
+    },
+    {
+      "route": "/contact",
+      "title": "Contact | Bridgeway Wholesale Ltd",
+      "canonical": "https://www.bridgewaywholesale.co.uk/contact",
+      "h1": "Let’s talk business.",
+      "unavailableStockImages": 1,
+      "brokenImages": [],
+      "pageErrors": [],
+      "networkFailures": [
+        {
+          "url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1000&q=82&fm=jpg",
+          "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1000&q=82&fm=jpg",
+          "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+        }
+      ],
+      "httpFailures": []
+    },
+    {
+      "route": "/privacy",
+      "title": "Privacy Policy | Bridgeway Wholesale Ltd",
+      "canonical": "https://www.bridgewaywholesale.co.uk/privacy",
+      "h1": "Privacy Policy",
+      "unavailableStockImages": 0,
+      "brokenImages": [],
+      "pageErrors": [],
+      "networkFailures": [],
+      "httpFailures": []
+    },
+    {
+      "route": "/terms",
+      "title": "Terms & Conditions | Bridgeway Wholesale Ltd",
+      "canonical": "https://www.bridgewaywholesale.co.uk/terms",
+      "h1": "Terms & Conditions",
+      "unavailableStockImages": 0,
+      "brokenImages": [],
+      "pageErrors": [],
+      "networkFailures": [],
+      "httpFailures": []
+    }
+  ]
+}

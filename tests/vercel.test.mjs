@@ -41,3 +41,9 @@ test('page assets use versioned URLs and mutable code revalidates instead of sta
  }
  const script=await fetch(base+'/app.js');assert.equal(script.headers.get('cache-control'),'no-cache');assert.match(await script.text(),/info@bridgewaywholesale\.co\.uk/);
 });
+test('each public page has server-rendered metadata on the real company domain',async()=>{
+ for(const path of ['/','/about','/our-business','/products','/contact','/privacy','/terms']){
+  const res=await fetch(base+path+'?qa=1');const html=await res.text();assert.ok(html.includes(`<link rel="canonical" href="https://www.bridgewaywholesale.co.uk${path}">`));assert.ok(html.includes(`<meta property="og:url" content="https://www.bridgewaywholesale.co.uk${path}">`));assert.match(html,/<meta name="description" content="[^\"]+">/);
+ }
+ const terms=await (await fetch(base+'/terms')).text();assert.match(terms,/<title>Terms &amp; Conditions \| Bridgeway Wholesale Ltd<\/title>/);
+});

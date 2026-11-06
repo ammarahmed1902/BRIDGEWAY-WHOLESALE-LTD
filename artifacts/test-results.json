@@ -57,6 +57,10 @@
         "use": {
           "baseURL": "http://127.0.0.1:3000",
           "headless": true,
+          "proxy": {
+            "server": "http://proxy:8080",
+            "bypass": "127.0.0.1,localhost"
+          },
           "launchOptions": {
             "executablePath": "/usr/bin/chromium",
             "args": [
@@ -96,6 +100,320 @@
   },
   "suites": [
     {
+      "title": "content-accessibility.spec.js",
+      "file": "content-accessibility.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "accessibility and company identity /",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1193,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:16:40.004Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "caadc22c5421e23b900f-002c8b6ea74be3708dc8",
+          "file": "content-accessibility.spec.js",
+          "line": 4,
+          "column": 25
+        },
+        {
+          "title": "accessibility and company identity /about",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 812,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:16:41.411Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "caadc22c5421e23b900f-c20c22d016c2ef8cc733",
+          "file": "content-accessibility.spec.js",
+          "line": 4,
+          "column": 25
+        },
+        {
+          "title": "accessibility and company identity /our-business",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 777,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:16:42.235Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "caadc22c5421e23b900f-56d2c97cb8436ccd6b02",
+          "file": "content-accessibility.spec.js",
+          "line": 4,
+          "column": 25
+        },
+        {
+          "title": "accessibility and company identity /products",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 847,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:16:43.022Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "caadc22c5421e23b900f-d514c30ef22da92ffe9b",
+          "file": "content-accessibility.spec.js",
+          "line": 4,
+          "column": 25
+        },
+        {
+          "title": "accessibility and company identity /contact",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 768,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:16:43.881Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "caadc22c5421e23b900f-ed159026b6701935692a",
+          "file": "content-accessibility.spec.js",
+          "line": 4,
+          "column": 25
+        },
+        {
+          "title": "accessibility and company identity /privacy",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 805,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:16:44.662Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "caadc22c5421e23b900f-5d5d92e0e449bfb6a15a",
+          "file": "content-accessibility.spec.js",
+          "line": 4,
+          "column": 25
+        },
+        {
+          "title": "accessibility and company identity /terms",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 789,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:16:45.478Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "caadc22c5421e23b900f-f6bc417d90eee239c80f",
+          "file": "content-accessibility.spec.js",
+          "line": 4,
+          "column": 25
+        },
+        {
+          "title": "confirmed fulfilment, billing, returns and privacy content is consistent",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 352,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:16:46.278Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "caadc22c5421e23b900f-3e97625c6b72377aca6a",
+          "file": "content-accessibility.spec.js",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "all pages reflow with 200 percent text at narrow, tablet and desktop widths",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1374,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:16:46.649Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "caadc22c5421e23b900f-879d1b6c0b7a3a1ffff2",
+          "file": "content-accessibility.spec.js",
+          "line": 15,
+          "column": 1
+        }
+      ]
+    },
+    {
       "title": "website.spec.js",
       "file": "website.spec.js",
       "column": 0,
@@ -117,12 +435,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2078,
+                  "duration": 2344,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-05T15:36:58.373Z",
+                  "startTime": "2026-11-06T17:16:48.043Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -151,12 +469,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10275,
+                  "duration": 18095,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-05T15:37:00.691Z",
+                  "startTime": "2026-11-06T17:16:50.396Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -185,12 +503,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 413,
+                  "duration": 486,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-05T15:37:10.981Z",
+                  "startTime": "2026-11-06T17:17:08.506Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -219,12 +537,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 550,
+                  "duration": 549,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-05T15:37:11.406Z",
+                  "startTime": "2026-11-06T17:17:09.002Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -253,12 +571,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1167,
+                  "duration": 1224,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-05T15:37:11.965Z",
+                  "startTime": "2026-11-06T17:17:09.558Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -287,12 +605,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1678,
+                  "duration": 2604,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-05T15:37:13.145Z",
+                  "startTime": "2026-11-06T17:17:10.792Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -304,15 +622,83 @@
           "file": "website.spec.js",
           "line": 18,
           "column": 1
+        },
+        {
+          "title": "photography fallback remains labelled when the external source is unavailable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 296,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:17:13.404Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0f40305e0cf42b28aebd-bad28033486db44fa639",
+          "file": "website.spec.js",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "product showcase filters, artwork and product-specific enquiries work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2321,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:17:13.708Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0f40305e0cf42b28aebd-24f9afed465c39669686",
+          "file": "website.spec.js",
+          "line": 26,
+          "column": 1
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-11-05T15:36:57.875Z",
-    "duration": 17033.047,
-    "expected": 6,
+    "startTime": "2026-11-06T17:16:39.525Z",
+    "duration": 36589.304000000004,
+    "expected": 17,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

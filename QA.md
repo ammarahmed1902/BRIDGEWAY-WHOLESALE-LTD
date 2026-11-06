@@ -2,7 +2,9 @@
 
 ## Status
 
-**Development implementation tested; not ready for public launch.** Real stock photographs still need to download and be visually verified, the original logo file needs importing, and business email delivery is intentionally pending the owner's domain setup. The running site uses clearly labelled photography placeholders when image files are unavailable. These are not warehouse illustrations or substitute stock photographs.
+**Current local technical QA: 17 browser/accessibility/content cases and 8 server cases passed.** Business facts and policies were updated from the owner's trading description. All seven pages also passed 200% text reflow at 320/768/1440 px. Current evidence is in `artifacts/content-review/` and `artifacts/test-results.json`; earlier sections below retain historical checks and limitations.
+
+Production verification, actual inbox receipt, exact product photography, provider/data-processing review and a documented retention process remain outstanding. No Tide approval, official eligibility review or exhaustive legal/accessibility certification is claimed. The current company domain is https://www.bridgewaywholesale.co.uk.
 
 ## Browser coverage
 
@@ -80,3 +82,17 @@ Moved the homepage's featured cards directly into the dark Our Business section 
 Chromium confirmed exact item selection and section placement, no duplicate featured section, all three product-specific enquiry links, the all-products link and preservation of the seven-item Products page. No horizontal overflow at 320/375/390/768/1024/1280/1440/1920 px. Screenshots: `artifacts/home-business-products-desktop.png` and `artifacts/home-business-products-mobile.png`; desktop was visually inspected.
 
 The owner asked how enquiry emails can be delivered. Existing Resend-backed server code supports this without another form. Runtime credential names were checked by presence only: RESEND_API_KEY, ENQUIRY_FROM and ENQUIRY_TO remain unset; environment metadata has no secret or variable bindings. The owner needs a verified Resend sender domain and Vercel environment variables, followed by redeployment and an authorised test with confirmed inbox receipt. No live email was sent or claimed.
+
+## Real trading model and policies — 6 November 2026
+
+Updated public business copy from the owner’s actual operating description: active UK wholesale/seller fulfilment, seller-managed eBay listings, product/quantity/shipping-rate information, daily order sheets by email or WhatsApp, UK-only dispatch, weekly/monthly billing, damaged/incorrect notification within 15 days of delivery, case-reviewed postage/remedies and a qualified 4–8-hour response target. No trading history, revenue, certifications, stock guarantees, marketplace partnership, authorised-distributor status or banking approval was invented. See BUSINESS-CONTENT-REVIEW.md for source facts and remaining owner actions.
+
+Privacy now reflects website enquiries plus off-site order-sheet/recipient data and the actual services identified in the project and owner screenshots. It no longer presents internal “Before public launch” instructions or says the hosting provider is unknown. It describes current non-automatic correspondence retention honestly instead of inventing a deletion period. This is not a completed review of provider contracts, transfer safeguards or seller data-processing agreements. Terms are B2B and preserve non-excludable rights; no consumer cancellation rights are represented as waived.
+
+Added a company-identity panel and actual-domain server-rendered titles/descriptions/canonical/Open Graph URLs for all seven routes. Added an offscreen Products heading for semantic order and fixed an axe label-content mismatch by preserving the visible enquiry-link wording in its accessible name. A first QA run found that mismatch; after correction, the full 17-case browser suite passed. Eight Node/Vercel server cases also passed. New axe scans found no WCAG 2 A/AA or WCAG 2.1 A/AA violations on the tested desktop states; this is automated coverage, not a guarantee of exhaustive accessibility compliance.
+
+Coverage: system Chromium, all 7 pages opened directly/refreshed, all internal header/footer/category/product/CTA destinations, mobile menu and keyboard focus, empty/invalid form input, retained input on failure, mock confirmed acceptance, disabled/loading/repeated submission behaviour, and real local HTTP provider integration. Each page was checked at 320/375/390/550/640/768/900/1024/1280/1440/1920 px; landscape and 200% text scenarios were also exercised by the existing suite. Firefox/WebKit/physical devices were unavailable. No real external enquiry was sent or inbox receipt verified.
+
+Evidence: artifacts/test-results.json and artifacts/content-review/* (desktop/mobile screenshots for every page plus resource-audit.json). Resource audit observed no JavaScript page errors or broken image elements. Real stock photo requests remain blocked in this runtime and rendered the clearly labelled unavailable fallback, so external photography and live resource delivery are not marked verified. The live www.bridgewaywholesale.co.uk domain and official Tide site were denied by the environment proxy (HTTP 403), despite draft network additions and the owner’s settings confirmation. No Vercel production build/deployment/log access was available. Saving network configuration is not proof it was applied or published.
+
+The additional all-page 200% text check found an About-page callout heading overflow at 320 px. Constraining callout child widths and allowing heading reflow corrected it. The new regression covers all seven pages at 320/768/1440 px; the final full browser run has 17 passing cases.
